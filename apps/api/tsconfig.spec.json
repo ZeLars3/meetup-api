@@ -3,7 +3,30 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "paths": {
+      "@assets/*": [
+        "./src/app/assets/*"
+      ],
+      "@constants/*": [
+        "./src/app/constants/*"
+      ],
+      "@controllers/*": [
+        "./src/app/controllers/*"
+      ],
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@models/*": [
+        "./src/app/models/*"
+      ],
+      "@utils/*": [
+        "./src/app/utils/*"
+      ],
+      "@validations/*": [
+        "./src/app/validations/*"
+      ],
+    }
   },
   "include": ["jest.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/*.d.ts"]
 }

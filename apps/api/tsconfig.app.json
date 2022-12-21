@@ -3,7 +3,31 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["node", "express"]
+    "resolveJsonModule": true,
+    "types": ["node", "express"],
+    "paths": {
+      "@assets/*": [
+        "./src/app/assets/*"
+      ],
+      "@constants/*": [
+        "./src/app/constants/*"
+      ],
+      "@controllers/*": [
+        "./src/app/controllers/*"
+      ],
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@models/*": [
+        "./src/app/models/*"
+      ],
+      "@utils/*": [
+        "./src/app/utils/*"
+      ],
+      "@validations/*": [
+        "./src/app/validations/*"
+      ],
+    }
   },
   "exclude": ["jest.config.ts", "**/*.spec.ts", "**/*.test.ts"],
   "include": ["**/*.ts"]
