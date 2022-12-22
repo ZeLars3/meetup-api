@@ -13,7 +13,7 @@ import {
   register,
 } from '../controllers'
 import { ROUTES } from '../constants';
-import { userValidationMiddleware } from '../middlewares'
+import { registerValidationMiddleware, loginValidationMiddleware } from '../middlewares'
 import checkAuth from '../utils/checkAuth';
 import handleValidationErrors from '../utils/handleValidationErrors'
 import { registerValidatorSchema, loginValidatorSchema } from '../validations'
@@ -28,8 +28,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-app.post(`${ROUTES.authRoute}/register`, userValidationMiddleware(registerValidatorSchema), handleValidationErrors, register)
-app.post(`${ROUTES.authRoute}/login`, userValidationMiddleware(loginValidatorSchema), handleValidationErrors, login)
+app.post(`${ROUTES.authRoute}/register`, registerValidationMiddleware(registerValidatorSchema), handleValidationErrors, register)
+app.post(`${ROUTES.authRoute}/login`, loginValidationMiddleware(loginValidatorSchema), handleValidationErrors, login)
 
 app.post(ROUTES.meetupRoute, checkAuth, create);
 app.get(ROUTES.meetupRoute, getAll);

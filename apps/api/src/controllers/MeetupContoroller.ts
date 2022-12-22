@@ -18,7 +18,6 @@ export const create = async (req, res) => {
 
     res.status(STATUSES.created).json(meetup);
   } catch (err) {
-    console.log(err)
     res.status(STATUSES.serverError).json({
       message: INFO_MESSAGES.FailedCreateMeetup,
     });

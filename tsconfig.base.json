@@ -14,29 +14,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@assets/*": [
-        "./src/app/assets/*"
-      ],
-      "@constants/*": [
-        "./src/app/constants/*"
-      ],
-      "@controllers/*": [
-        "./src/app/controllers/*"
-      ],
-      "@app/*": [
-        "./src/app/*"
-      ],
-      "@models/*": [
-        "./src/app/models/*"
-      ],
-      "@utils/*": [
-        "./src/app/utils/*"
-      ],
-      "@validations/*": [
-        "./src/app/validations/*"
-      ],
-    }
+    "paths": {}
   },
   "exclude": ["node_modules", "tmp"]
 }
